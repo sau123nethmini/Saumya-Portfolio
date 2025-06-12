@@ -369,12 +369,14 @@ h3{
 
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
-    margin: 10px;
+    margin: 10px auto;
+    max-width: 600px;  /* adjust as needed */
 }
 .skills-header{
     margin-bottom: 30px;
 }
 .skills-list{
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -777,3 +779,53 @@ footer{
     }
 }
 
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav#header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .btn {
+    background-color: #333;
+    color: #eee;
+}
+
+/* Add more dark mode styles for other elements as needed */
+
+/* ----- DARK MODE VARIABLES ----- */
+.dark-mode {
+    --body-color: #121212;
+    --color-white: #ffffff;
+
+    --text-color-second: #cccccc;
+    --text-color-third: #06c6a6;
+
+    --first-color: #06c6a6;
+    --first-color-hover: #04a68e;
+
+    --second-color: #04a68e;
+    --third-color: #038c76;
+    --first-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Override scrollbar for dark mode */
+.dark-mode ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Override footer background for dark mode */
+.dark-mode footer {
+    background: #1e1e1e;
+}
+
+/* You can add more dark mode overrides if needed */
