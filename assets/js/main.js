@@ -116,3 +116,78 @@ sections.forEach(current =>{
 
 window.addEventListener('scroll', scrollActive)
 
+function scrollLeft() {
+  const container = document.querySelector('.project-container');
+  if (container) {
+      const currentScroll = container.scrollLeft;
+      if (currentScroll > 0) { // Check if not at the start
+          container.scrollBy({ left: -300, behavior: 'smooth' });
+      }
+  }
+}
+
+function scrollRight() {
+  const container = document.querySelector('.project-container');
+  if (container) {
+      const maxScrollLeft = container.scrollWidth - container.clientWidth; // Calculate maximum scrollable width
+      if (container.scrollLeft < maxScrollLeft) { // Check if not at the end
+          container.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+  }
+}
+
+// Show or hide the "Up Arrow" button based on scroll position
+window.addEventListener('scroll', () => {
+  const scrollToTopButton = document.getElementById('scrollToTop');
+  if (window.scrollY > 300) { // Show button after scrolling down 300px
+      scrollToTopButton.classList.add('show');
+  } else {
+      scrollToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to the top of the page when the button is clicked
+document.getElementById('scrollToTop').addEventListener('click', () => {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling effect
+  });
+});
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form values
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Validate form fields
+  if (!name || !email || !message) {
+      alert('Please fill out all fields before sending.');
+      return;
+  }
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+  }
+
+  // Send the email using mailto
+  const mailtoLink = `mailto:saumya123na@gmail.com?subject=Message from ${name}&body=Email: ${email}%0A%0A${message}`;
+  window.location.href = mailtoLink;
+
+  // Show custom popup
+  document.getElementById('popupMessage').style.display = 'block';
+});
+
+function closePopup() {
+  document.getElementById('popupMessage').style.display = 'none';
+}
+
+function navigateToContact() {
+  const contactSection = document.getElementById('contact');
+  contactSection.scrollIntoView({ behavior: 'smooth' });
+}

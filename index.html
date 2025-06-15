@@ -50,7 +50,6 @@
                 </ul>
             </div>
             <div class="nav-button">
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
                 <button id="darkModeToggle" class="btn" title="Toggle Dark Mode">
                     <i class="uil uil-moon"></i>
                 </button>
@@ -78,21 +77,24 @@
                         </p>
                     </div>
                     <div class="featured-text-btn">
-                        <button class="btn blue-btn">Hire Me</button>
-                        <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+                        <button class="btn blue-btn" onclick="navigateToContact()">Hire Me</button>
+                        <a href="assets/files/Saumya_Nethmini_CV Resume.pdf" class="btn cv-btn" download="Your_CV.pdf">
+                            Download CV <i class="uil uil-file-alt"></i>
+                        </a>
                     </div>
                     <div class="social_icons">
-                        <div class="icon"><i class="uil uil-instagram">
-                            <a href="https://your-certificate-link.com" target="_blank"></a></i></div>
-                        <div class="icon"><i class="uil uil-linkedin-alt">
-                            <a href="https://www.linkedin.com/in/saumya-nethmini-641131235/" target="_blank"></a>
-                        </i></div>
-                        <div class="icon"><i class="uil uil-dribbble">
-                            <a href="https://your-certificate-link.com" target="_blank"></a>
-                        </i></div>
-                        <div class="icon"><i class="uil uil-github-alt">
-                            <a href="https://your-certificate-link.com" target="_blank"></a>
-                        </i></div>
+                        <a href="https://www.instagram.com/_sau_neth" target="_blank" class="icon">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saumya-nethmini" target="_blank" class="icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="saumya123na@gmail.com" target="_blank" class="icon">
+                            <i class="uil uil-envelope"></i>
+                        </a>
+                        <a href="https://github.com/sau123nethmini" target="_blank" class="icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="featured-image">
@@ -116,87 +118,111 @@
                 <div class="row">
                     <div class="col">
                         <div class="about-info">
-                            <h3>My introduction</h3>
-                            <p>As an undergraduate in Information Technology, I have developed a foundation in
-                                programming and problem-solving.
-
-                                I have gained practical experience through academic group projects, collaborating with
-                                peers to deliver software solutions.
-
-                                I am eager to apply my skills in real world projects and continue growing as a software
-                                developer.
+                            <p>
+                                I am an ambitious and detail-oriented undergraduate student pursuing a Bachelor of
+                                Science Honors degree in Information Technology at SLIIT. With a strong foundation in
+                                programming languages such as Java, Python, and C++, I am passionate about building
+                                impactful mobile and web applications. I enjoy solving real-world problems through code
+                                and continuously strive to learn and grow in the fast-paced world of technology.
+                                <br><br>
+                                My goal is to become a skilled and independent IT professional, capable of contributing
+                                effectively to innovative projects while gaining hands-on experience in a professional
+                                environment. I am particularly interested in mobile app development, UI/UX design, and
+                                full-stack development.
                             </p>
-                            <div class="about-btn">
-                                <button class="btn">Download CV <i class="uil uil-import"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <!-- -------------- Education BOX ---------------- -->
+                            <!-- Education Section Inside About Box -->
+                            <div class="edu-cert-container timeline">
+                                <h3>Education</h3>
+                                <div class="education-item">
+                                    <div class="timeline-icon">
+                                        <i class="uil uil-graduation-cap"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>BSc (Hons) in Information Technology</h4>
+                                        <p>SLIIT – Sri Lanka Institute of Information Technology</p>
+                                        <p>2022 – Present</p>
+                                    </div>
+                                </div>
+                                <div class="education-item">
+                                    <div class="timeline-icon">
+                                        <i class="uil uil-graduation-cap"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>GCE A/L in Physical Science Stream</h4>
+                                        <p>B/Kuda Kusum Balika National School</p>
+                                        <p>2017 – 2020</p>
+                                    </div>
+                                </div>
+                            </div>
 
-            <section class="section" id="about">
-                <div class="edu-cert-container">
-                    <!-- Education Section -->
-                    <div class="about-edu">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <i class="uil uil-graduation-cap"></i>
-                            <div>
-                                <h4>BSc (Hons) in Information Technology</h4>
-                                <p>SLIIT – Sri Lanka Institute of Information Technology</p>
-                                <p>2022 – Present</p>
-                            </div>
-                        </div>
-                        <div class="education-item">
-                            <i class="uil uil-graduation-cap"></i>
-                            <div>
-                                <h4>GCE A/L in Physical Science Stream</h4>
-                                <p>B/Kuda Kusum Balika National School</p>
-                                <p>2017 – 2020</p>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- Certificates Section -->
-                    <div class="about-ceti">
-                        <h3>Certificates</h3>
-                        <div class="certificate-list">
-                            <div class="certificate-item">
-                                <img src="assets/images/operating-systems-basics.png" alt="Certificate Badge" class="badge-icon">
-                                <div>
-                                    <h4>Operating Systems Basics</h4>
-                                    <p><a href="https://your-certificate-link.com" target="_blank">View Certificate</a></p>
+                            <div class="ceti-cert-container">
+                                <h3>Certificates</h3>
+                                <div class="certificate-list">
+                                    <div class="certificate-item">
+                                        <img src="assets/images/operating-systems-basics.png" alt="Certificate Badge"
+                                            class="badge-icon">
+                                        <div>
+                                            <h4>Operating Systems Basics</h4>
+                                            <p><a href="https://your-certificate-link.com" target="_blank">View
+                                                    Certificate</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="assets/images/ai-fundamentals-with-ibm-skillsbuild.png"
+                                            alt="Certificate Badge" class="badge-icon">
+                                        <div>
+                                            <h4>Ai Fundamentals</h4>
+                                            <p><a href="https://your-certificate-link.com" target="_blank">View
+                                                    Certificate</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="assets/images/artificial-intelligence-fundamentals.png"
+                                            alt="Certificate Badge" class="badge-icon">
+                                        <div>
+                                            <h4>Artificial Intelligence Fundamentals</h4>
+                                            <p><a href="https://your-certificate-link.com" target="_blank">View
+                                                    Certificate</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="assets/images/introduction-to-modern-ai.png" alt="Certificate Badge"
+                                            class="badge-icon">
+                                        <div>
+                                            <h4>Introduction to Modern Ai</h4>
+                                            <p><a href="https://your-certificate-link.com" target="_blank">View
+                                                    Certificate</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="certificate-item">
+                                        <img src="assets/images/introduction-to-iot.png" alt="Certificate Badge"
+                                            class="badge-icon">
+                                        <div>
+                                            <h4>Introduction to IoT</h4>
+                                            <p><a href="https://your-certificate-link.com" target="_blank">View
+                                                    Certificate</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
-                            <div class="certificate-item">
-                                <img src="assets/images/ai-fundamentals-with-ibm-skillsbuild.png" alt="Certificate Badge" class="badge-icon">
-                                <div>
-                                    <h4>Ai Fundamentals</h4>
-                                    <p><a href="https://your-certificate-link.com" target="_blank">View Certificate</a></p>
-                                </div>
-                            </div>
-                            <div class="certificate-item">
-                                <img src="assets/images/artificial-intelligence-fundamentals.png" alt="Certificate Badge" class="badge-icon">
-                                <div>
-                                    <h4>Artificial Intelligence Fundamentals</h4>
-                                    <p><a href="https://your-certificate-link.com" target="_blank">View Certificate</a></p>
-                                </div>
-                            </div>
-                            <div class="certificate-item">
-                                <img src="assets/images/introduction-to-modern-ai.png" alt="Certificate Badge" class="badge-icon">
-                                <div>
-                                    <h4>Introduction to Modern Ai</h4>
-                                    <p><a href="https://your-certificate-link.com" target="_blank">View Certificate</a></p>
-                                </div>
-                            </div>
-                            <div class="certificate-item">
-                                <img src="assets/images/introduction-to-iot.png" alt="Certificate Badge" class="badge-icon">
-                                <div>
-                                    <h4>Introduction to IoT</h4>
-                                    <p><a href="https://your-certificate-link.com" target="_blank">View Certificate</a></p>
-                                </div>
+                            <div class="project-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <!-- Add more dots based on the number of projects -->
                             </div>
                         </div>
                     </div>
@@ -206,179 +232,231 @@
             <!-- -------------- Skill BOX ---------------- -->
             <section class="section" id="skills">
                 <div class="top-header">
-                  <h1>Skills</h1>
+                    <h1>Skills</h1>
                 </div>
                 <div class="row">
-                  <div class="col">
+                    <div class="col">
 
-                    <div class="about-edu">
-                        <div class="skills-header">
-                            <h3>Frontend</h3>
-                          </div>
-                          <div class="skills-list">
-                            <div class="icon" title="HTML5"><i class="uil uil-html5"></i></div>
-                            <div class="icon" title="CSS3"><i class="uil uil-css3-simple"></i></div>
-                            <div class="icon" title="JavaScript"><i class="uil uil-java-script"></i></div>
-                            <div class="icon" title="TypeScript"><i class="uil uil-brackets-curly"></i></div>
-                            <div class="icon" title="React.js"><i class="uil uil-react"></i></div>
-                            <div class="icon" title="Next.js"><i class="uil uil-arrow-growth"></i></div>
-                            <div class="icon" title="Tailwind CSS"><i class="uil uil-wind"></i></div>
-                          </div>
-                    </div>
-                    <div class="about-edu">
-                        <div class="skills-header">
-                            <h3>Backend</h3>
-                          </div>
-                          <div class="skills-list">
-                            <div class="icon" title="Git"><i class="uil uil-arrow-merge"></i></div>
-                            <div class="icon" title="GitHub"><i class="uil uil-github-alt"></i></div>
-                            <div class="icon" title="Webpack"><i class="uil uil-setting"></i></div>
-                            <div class="icon" title="Vite"><i class="uil uil-lightbulb-alt"></i></div>
-                            <div class="icon" title="npm/yarn"><i class="uil uil-package"></i></div>
-                            <div class="icon" title="VS Code"><i class="uil uil-visual-studio"></i></div>
-                            <div class="icon" title="Eclipse"><i class="uil uil-code-branch"></i></div>
-                          </div>
-                    </div>
+                        <div class="about-skill">
+                            <div class="skills-header">
+                                <h3>Frontend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="icon" title="HTML5"><i class="uil uil-html5"></i></div>
+                                <div class="icon" title="CSS3"><i class="uil uil-css3-simple"></i></div>
+                                <div class="icon" title="JavaScript"><i class="uil uil-java-script"></i></div>
+                                <div class="icon" title="React.js"><i class="uil uil-react"></i></div>
+                                <div class="icon" title="Next.js"><i class="uil uil-arrow-growth"></i></div>
+                                <div class="icon" title="Tailwind CSS"><i class="uil uil-wind"></i></div>
+                                <div class="icon" title="Bootstrap"><i class="uil uil-bootstrap"></i></div>
+                                <div class="icon" title="UI/UX Design"><i class="uil uil-object-group"></i></div>
+                                <div class="icon" title="Figma"><i class="uil uil-pen"></i></div>
+                            </div>
+                        </div>
+                        <div class="about-skill">
+                            <div class="skills-header">
+                                <h3>Backend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="icon" title="Java"><i class="uil uil-java-script"></i></div>
+                                <div class="icon" title="Python"><i class="uil uil-python"></i></div>
+                                <div class="icon" title="C"><i class="uil uil-brackets-curly"></i></div>
+                                <div class="icon" title="C++"><i class="uil uil-brackets-curly"></i></div>
+                                <div class="icon" title="PHP"><i class="uil uil-php"></i></div>
+                                <div class="icon" title="Kotlin"><i class="uil uil-code-branch"></i></div>
+                                <div class="icon" title="Node.js"><i class="uil uil-node-js"></i></div>
+                                <div class="icon" title="Express.js"><i class="uil uil-server-network"></i></div>
+                                <div class="icon" title="REST APIs"><i class="uil uil-cloud-database-tree"></i></div>
+                            </div>
+                        </div>
 
-                    <div class="about-edu">
-                        <div class="skills-header">
-                            <h3>Database</h3>
-                          </div>
-                          <div class="skills-list">
-                            <div class="icon" title="Responsive Design"><i class="uil uil-mobile-android"></i></div>
-                            <div class="icon" title="UI/UX Design"><i class="uil uil-object-group"></i></div>
-                            <div class="icon" title="Figma"><i class="uil uil-pen"></i></div>
-                            <div class="icon" title="Kotlin"><i class="uil uil-code"></i></div>
-                            <div class="icon" title="RESTful APIs"><i class="uil uil-cloud-database-tree"></i></div>
-                            <div class="icon" title="Leadership Skills"><i class="uil uil-user-check"></i></div>
-                          </div>
-                    </div>
+                        <div class="about-skill">
+                            <div class="skills-header">
+                                <h3>Database</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="icon" title="MySQL"><i class="uil uil-database"></i></div>
+                                <div class="icon" title="SQLite"><i class="uil uil-database"></i></div>
+                                <div class="icon" title="MongoDB"><i class="uil uil-database"></i></div>
+                            </div>
+                        </div>
 
-                    <div class="about-edu">
-                        <div class="skills-header">
-                            <h3>Tools & Environment</h3>
-                          </div>
-                          <div class="skills-list">
-                            <!-- Add your tool/environment icons here -->
-                            <div class="icon" title="Docker"><i class="uil uil-docker"></i></div>
-                            <div class="icon" title="Jenkins"><i class="uil uil-server-network"></i></div>
-                            <div class="icon" title="AWS"><i class="uil uil-cloud"></i></div>
-                            <div class="icon" title="Linux"><i class="uil uil-linux"></i></div>
-                            <div class="icon" title="VS Code"><i class="uil uil-visual-studio"></i></div>
-                          </div>
-                    </div>
-
-                    <div class="about-edu">
-                        <div class="skills-header">
-                            <h3>Other Skills</h3>
-                          </div>
-                          <div class="skills-list">
-                            <!-- Add other skills icons here -->
-                            <div class="icon" title="Communication"><i class="uil uil-comments"></i></div>
-                            <div class="icon" title="Project Management"><i class="uil uil-clipboard-notes"></i></div>
-                            <div class="icon" title="Problem Solving"><i class="uil uil-brain"></i></div>
-                            <div class="icon" title="Time Management"><i class="uil uil-clock"></i></div>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-    <!-- -------------- PROJECT BOX ---------------- -->
-
-    <section class="section" id="projects">
-        <div class="top-header">
-            <h1>Projects</h1>
-        </div>
-        <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completed</h3>
-                <label>10+ Finished Projects</label>
-            </div>
-            <div class="project-box">
-                <i class="uil uil-users-alt"></i>
-                <h3>Clients</h3>
-                <label>2+ Happy Clients</label>
-            </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Experience</h3>
-                <label>--- Years in the field</label>
-            </div>
-        </div>
-    </section>
-
-    <!-- -------------- CONTACT BOX ---------------- -->
-
-    <section class="section" id="contact">
-        <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Do you have a project in your mind, contact me here</span>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: saumya123na@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: +94-714778105</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-control">
-                    <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
-                    </div>
-                    <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                        <div class="about-skill">
+                            <div class="skills-header">
+                                <h3>Tools & Environment</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="icon" title="VS Code"><i class="uil uil-visual-studio"></i></div>
+                                <div class="icon" title="Git"><i class="uil uil-git-alt"></i></div>
+                                <div class="icon" title="GitHub"><i class="uil uil-github-alt"></i></div>
+                                <div class="icon" title="Postman"><i class="uil uil-envelope-edit"></i></div>
+                                <div class="icon" title="Android Studio"><i class="uil uil-android"></i></div>
+                                <div class="icon" title="Jira"><i class="uil uil-presentation-line"></i></div>
+                                <div class="icon" title="Trello"><i class="uil uil-presentation-line"></i></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- -------------- PROJECT BOX ---------------- -->
+
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-wrapper">
+
+                    <div class="project-container">
+                        <!-- Project 1 -->
+                        <div class="project-box">
+                            <img src="assets/images/Blue Smartphone Promo Poster.png" alt="Project Poster 1"
+                                class="project-poster">
+                            <h3>Personal Finance Tracker</h3>
+                            <p class="project-description">Personal Finance Tracker mobile application developed using Kotlin
+                                in Android Studio.</p>
+                            <a href="https://github.com/yourusername/project1" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster2.jpg" alt="Project Poster 2" class="project-poster">
+                            <h3>Doctor Appointment Booking System</h3>
+                            <p class="project-description">MERN Stack Doctor Appointment Booking App using React JS,
+                                MongoDB, Express and Node JS. Compete Full Stack React JS
+                                project
+                                </p>
+                            <a href="https://github.com/yourusername/project2" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Gewal.lk</h3>
+                            <p class="project-description">MERN Stack Real Estate Property Managment System using React JS,
+                                MongoDB, Express and Node JS. Compete Full Stack React JS
+                                project</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Project Name 3</h3>
+                            <p class="project-description">Brief description of the project goes here.</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Project Name 3</h3>
+                            <p class="project-description">Brief description of the project goes here.</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Project Name 3</h3>
+                            <p class="project-description">Brief description of the project goes here.</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Project Name 3</h3>
+                            <p class="project-description">Brief description of the project goes here.</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-box">
+                            <img src="path/to/project-poster3.jpg" alt="Project Poster 3" class="project-poster">
+                            <h3>Project Name 3</h3>
+                            <p class="project-description">Brief description of the project goes here.</p>
+                            <a href="https://github.com/yourusername/project3" class="project-link"
+                                target="_blank">GitHub Link</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="project-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <!-- Add more dots based on the number of projects -->
+                </div>
+            </section>
+
+
+
+            <!-- -------------- CONTACT BOX ---------------- -->
+
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Get in touch</h1>
+                    <span>Do you have a project in your mind, contact me here</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i> Email: saumya123na@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> Tel: +94-714778105</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-control" id="contactForm">
+                            <div class="form-inputs">
+                                <input type="text" id="name" class="input-field" placeholder="Name" required>
+                                <input type="email" id="email" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="text-area">
+                                <textarea placeholder="Message" id="message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- --------------- BACK TO TOP BUTTON --------------- -->
+        <!-- Up Arrow Button -->
+        <button id="scrollToTop" class="btn up-arrow" title="Go to Top">
+            <i class="uil uil-arrow-up"></i>
+        </button>
+
+
+        <!-- --------------- FOOTER --------------- -->
+        <footer>
+            <div class="top-footer">
+                <p>Saumya Nethmini .</p>
             </div>
-        </div>
-    </section>
 
-    </main>
-
-
-    <!-- --------------- FOOTER --------------- -->
-    <footer>
-        <div class="top-footer">
-            <p>Saumya Nethmini .</p>
-        </div>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#skills">Skils</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-social-icons">
-            <div class="icon"><i class="uil uil-instagram"></i></div>
-            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-            <div class="icon"><i class="uil uil-dribbble"></i></div>
-            <div class="icon"><i class="uil uil-github-alt"></i></div>
-        </div>
-        <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Saumya</a> - All rights reserved
-            </p>
-        </div>
-    </footer>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Saumya</a> - All rights reserved
+                </p>
+            </div>
+        </footer>
 
     </div>
 
@@ -395,18 +473,26 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+        // Scroll to the top of the page on refresh
+        window.history.scrollRestoration = 'manual';
+        window.onload = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'instant'
+            });
+        };
         const toggleBtn = document.getElementById('darkModeToggle');
-    
+
         // Check if dark mode was previously enabled
-        if(localStorage.getItem('darkMode') === 'enabled'){
+        if (localStorage.getItem('darkMode') === 'enabled') {
             document.body.classList.add('dark-mode');
         }
-    
+
         toggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-    
+
             // Save user preference in localStorage
-            if(document.body.classList.contains('dark-mode')){
+            if (document.body.classList.contains('dark-mode')) {
                 localStorage.setItem('darkMode', 'enabled');
                 toggleBtn.innerHTML = '<i class="uil uil-sun"></i>'; // Change icon to sun
             } else {
@@ -414,15 +500,20 @@
                 toggleBtn.innerHTML = '<i class="uil uil-moon"></i>'; // Change icon to moon
             }
         });
-    
+
         // On load, set correct icon based on preference
-        if(document.body.classList.contains('dark-mode')){
+        if (document.body.classList.contains('dark-mode')) {
             toggleBtn.innerHTML = '<i class="uil uil-sun"></i>';
         } else {
             toggleBtn.innerHTML = '<i class="uil uil-moon"></i>';
         }
     </script>
-    
+
+    <div id="popupMessage" class="popup">
+        <p>Your message has been sent successfully!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
 </body>
 
 </html>
