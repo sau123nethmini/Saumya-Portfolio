@@ -29,7 +29,7 @@ I love transforming ideas into real-world applications using clean code and intu
 ## 🌐 Live Website
 
 🚀 Check out the live version of my portfolio:  
-**🔗 https://sau123nethmini.github.io/My_Portfolio/
+**🔗 https://saumya-nethmini.netlify.app/
 
 ---
 
