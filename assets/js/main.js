@@ -191,3 +191,42 @@ function navigateToContact() {
   const contactSection = document.getElementById('contact');
   contactSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+
+const skillsList = document.getElementById('skillsList');
+const skillsDots = document.getElementById('skillsDots');
+const skillBoxes = document.querySelectorAll('.skills-box');
+
+// Generate dots based on the number of skill boxes
+skillBoxes.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active'); // Set the first dot as active
+    dot.addEventListener('click', () => {
+        skillsList.scrollTo({
+            left: index * skillsList.offsetWidth,
+            behavior: 'smooth',
+        });
+        updateDots(index);
+    });
+    skillsDots.appendChild(dot);
+});
+
+// Update active dot
+function updateDots(activeIndex) {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        if (index === activeIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Add scroll event listener to update dots
+skillsList.addEventListener('scroll', () => {
+    const activeIndex = Math.round(skillsList.scrollLeft / skillsList.offsetWidth);
+    updateDots(activeIndex);
+});
