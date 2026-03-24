@@ -1,44 +1,86 @@
 <div align="center">
-  <img src="assets/images/screencapture-saumya-nethmini.png" alt="Screenshot 1" width="500"/>
+  <h1>Saumya Nethmini | Portfolio Website</h1>
+
+  <p>
+    IT Undergraduate at <strong>SLIIT</strong> • Web Developer • SEO Intern
+  </p>
+
+  <p>
+    Passionate about building modern, responsive, and user-focused digital experiences.
+  </p>
 </div>
 
-<h1 align="center">✨ Saumya Nethmini | Portfolio Website ✨</h1>
+---
 
-<p align="center">
-  🎓 Undergraduate at <strong>SLIIT</strong> <br>
-  💻 Specializing in <strong>Software Engineering</strong> <br>
-  🚀 Passionate about <em>Mobile Development</em>, <em>UI/UX</em>, and <em>Full-Stack Development</em>
-</p>
+## About This Project
+
+This is my personal portfolio website, created to showcase my background, technical skills, projects, certifications, and professional experience in a clean and modern way.
+
+The portfolio reflects my journey as an Information Technology undergraduate at SLIIT, with interests in software engineering, web development, UI/UX, and full-stack application development.
 
 ---
 
-## 🌟 About Me
+## Professional Summary
 
-Hello! I'm Saumya Nethmini — an ambitious and detail-oriented undergraduate student pursuing a Bachelor of Science Honours degree in Information Technology at SLIIT, specializing in **Software Engineering**.
+I am an ambitious and detail-oriented undergraduate pursuing a Bachelor of Science Honours degree in Information Technology at SLIIT, specializing in Software Engineering.
 
-I love transforming ideas into real-world applications using clean code and intuitive design. Whether it's building responsive websites or creating seamless mobile experiences, I enjoy learning and crafting quality software.
+I enjoy developing practical and visually appealing digital solutions while continuously improving my technical and creative skills. My interests include web development, mobile application development, UI/UX design, and full-stack systems.
 
----
-
-## 🎯 Career Goal
-
-> To become a **skilled and independent Software Engineering professional**, contributing effectively to innovative projects while gaining hands-on experience in real-world development environments.
+My goal is to grow into a skilled Software Engineering professional who can contribute to innovative and meaningful projects in real-world environments.
 
 ---
 
-## 🌐 Live Website
+## Featured Highlights
 
-🚀 Check out the live version of my portfolio:  
-**🔗 https://saumya-nethmini.netlify.app/
-
----
-
-## 📬 Let's Connect!
-
-- 📧 **Email:** saumya123na@gmail.com  
-- 💼 **LinkedIn:** www.linkedin.com/in/saumya-nethmini 
-- 💻 **GitHub:** github.com/sau123nethmini
+- Modern and responsive personal portfolio website
+- Professional hero section and project showcase
+- Clean UI with smooth layout and styling
+- Sections for About, Skills, Projects, Certifications, and Contact
+- Built to present academic and personal work professionally
 
 ---
 
-> Thank you for visiting my portfolio repository! 🌟
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome
+- Google Fonts
+
+---
+
+## Live Website
+
+Visit the live portfolio here:
+
+**[saumya-nethmini.netlify.app](https://saumya-nethmini.netlify.app/)**
+
+---
+
+## Contact
+
+- **Email:** saumya123na@gmail.com
+- **LinkedIn:** [linkedin.com/in/saumya-nethmini](https://www.linkedin.com/in/saumya-nethmini)
+- **GitHub:** [github.com/sau123nethmini](https://github.com/sau123nethmini)
+
+---
+
+## Preview
+
+<div align="center">
+  <img src="assets/images/screencapture-saumya-nethmini.png" alt="Portfolio Preview" width="800"/>
+</div>
+
+---
+
+## Purpose
+
+This portfolio was developed as a personal branding website to represent my profile, skills, and project work in a professional way for internships, collaborations, and future career opportunities.
+
+---
+
+<div align="center">
+  <strong>Thank you for visiting my portfolio repository.</strong><br>
+  I appreciate your time and interest.
+</div>
