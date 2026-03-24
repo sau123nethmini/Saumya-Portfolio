@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5e45e72e-053b-47e1-82fc-449a48a00d44" alt="Screenshot 1" width="500"/>
+  <img src="assets/images/screencapture-saumya-nethmini.png" alt="Screenshot 1" width="500"/>
 </div>
 
 <h1 align="center">✨ Saumya Nethmini | Portfolio Website ✨</h1>
