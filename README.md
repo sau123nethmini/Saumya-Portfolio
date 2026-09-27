@@ -1,86 +1,45 @@
 <div align="center">
-  <h1>Saumya Nethmini | Portfolio Website</h1>
 
-  <p>
-    IT Undergraduate at <strong>SLIIT</strong> • Web Developer • SEO Intern
-  </p>
+# Saumya Nethmini — Portfolio
 
-  <p>
-    Passionate about building modern, responsive, and user-focused digital experiences.
-  </p>
+**Full-Stack Web Developer · IT Programmer at Octo Global · Final-year IT undergraduate at SLIIT**
+
+An editorial, magazine-style portfolio that presents my work like a printed portfolio book —
+built with plain HTML, CSS and JavaScript, animated with GSAP.
+
+[![Live Site](https://img.shields.io/badge/Live_Site-saumya--nethmini.netlify.app-7A1418?style=for-the-badge&logo=netlify&logoColor=white)](https://saumya-nethmini.netlify.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-saumya--nethmini-161412?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saumya-nethmini/)
+
+![Portfolio preview](assets/images/preview.png)
+
 </div>
 
 ---
 
-## About This Project
+## About
 
-This is my personal portfolio website, created to showcase my background, technical skills, projects, certifications, and professional experience in a clean and modern way.
+This is my personal portfolio: the place where my experience, projects, skills and
+certifications come together. I'm a full-stack web developer and IT Programmer at
+**Octo Global (Pvt) Ltd**, where I build client websites and APIs, fix bugs and improve
+search rankings for news and gaming brands. I'm also in my final year of a
+**BSc (Hons) in Information Technology at SLIIT**.
 
-The portfolio reflects my journey as an Information Technology undergraduate at SLIIT, with interests in software engineering, web development, UI/UX, and full-stack application development.
+My background in SEO shapes how I build: every site should be fast, accessible and easy
+to find — and this portfolio is built to the same standard.
 
----
-
-## Professional Summary
-
-I am an ambitious and detail-oriented undergraduate pursuing a Bachelor of Science Honours degree in Information Technology at SLIIT, specializing in Software Engineering.
-
-I enjoy developing practical and visually appealing digital solutions while continuously improving my technical and creative skills. My interests include web development, mobile application development, UI/UX design, and full-stack systems.
-
-My goal is to grow into a skilled Software Engineering professional who can contribute to innovative and meaningful projects in real-world environments.
-
----
-
-## Featured Highlights
-
-- Modern and responsive personal portfolio website
-- Professional hero section and project showcase
-- Clean UI with smooth layout and styling
-- Sections for About, Skills, Projects, Certifications, and Contact
-- Built to present academic and personal work professionally
-
----
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-- Google Fonts
-
----
-
-## Live Website
-
-Visit the live portfolio here:
-
-**[saumya-nethmini.netlify.app](https://saumya-nethmini.netlify.app/)**
-
----
 
 ## Contact
 
-- **Email:** saumya123na@gmail.com
-- **LinkedIn:** [linkedin.com/in/saumya-nethmini](https://www.linkedin.com/in/saumya-nethmini)
+- **Email:** [saumya123na@gmail.com](mailto:saumya123na@gmail.com)
+- **LinkedIn:** [linkedin.com/in/saumya-nethmini](https://www.linkedin.com/in/saumya-nethmini/)
 - **GitHub:** [github.com/sau123nethmini](https://github.com/sau123nethmini)
-
----
-
-## Preview
-
-<div align="center">
-  <img src="assets/images/preview.png" alt="Portfolio Preview" width="800"/>
-</div>
-
----
-
-## Purpose
-
-This portfolio was developed as a personal branding website to represent my profile, skills, and project work in a professional way for internships, collaborations, and future career opportunities.
+- **Portfolio:** [saumya-nethmini.netlify.app](https://saumya-nethmini.netlify.app/)
 
 ---
 
 <div align="center">
-  <strong>Thank you for visiting my portfolio repository.</strong><br>
-  I appreciate your time and interest.
+
+© 2026 Saumya Nethmini. The design and content of this portfolio are my own —
+please don't copy them as-is, but feel free to take inspiration.
+
 </div>
