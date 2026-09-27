@@ -69,7 +69,7 @@ Visit the live portfolio here:
 ## Preview
 
 <div align="center">
-  <img src="assets/images/screencapture-saumya-nethmini.png" alt="Portfolio Preview" width="800"/>
+  <img src="assets/images/preview.png" alt="Portfolio Preview" width="800"/>
 </div>
 
 ---
