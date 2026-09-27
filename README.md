@@ -1,10 +1,10 @@
 <div align="center">
 
-# Saumya Nethmini — Portfolio
+# Saumya Nethmini - Portfolio
 
 **Full-Stack Web Developer · IT Programmer at Octo Global · Final-year IT undergraduate at SLIIT**
 
-An editorial, magazine-style portfolio that presents my work like a printed portfolio book —
+An editorial, magazine-style portfolio that presents my work like a printed portfolio book -
 built with plain HTML, CSS and JavaScript, animated with GSAP.
 
 [![Live Site](https://img.shields.io/badge/Live_Site-saumya--nethmini.netlify.app-7A1418?style=for-the-badge&logo=netlify&logoColor=white)](https://saumya-nethmini.netlify.app/)
@@ -25,7 +25,7 @@ search rankings for news and gaming brands. I'm also in my final year of a
 **BSc (Hons) in Information Technology at SLIIT**.
 
 My background in SEO shapes how I build: every site should be fast, accessible and easy
-to find — and this portfolio is built to the same standard.
+to find - and this portfolio is built to the same standard.
 
 
 ## Contact
@@ -39,7 +39,7 @@ to find — and this portfolio is built to the same standard.
 
 <div align="center">
 
-© 2026 Saumya Nethmini. The design and content of this portfolio are my own —
+© 2026 Saumya Nethmini. The design and content of this portfolio are my own -
 please don't copy them as-is, but feel free to take inspiration.
 
 </div>
