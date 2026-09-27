@@ -1,152 +1,45 @@
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const themeToggle = document.getElementById("themeToggle");
-const scrollTopBtn = document.getElementById("scrollTop");
-const navLinkItems = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section[id]");
-const reveals = document.querySelectorAll(".reveal");
-const typingText = document.getElementById("typingText");
-const contactForm = document.getElementById("contactForm");
-
-const typingWords = [
-  "IT Undergraduate",
-  "Web Developer",
-  "SEO Intern",
-  "Frontend Enthusiast"
+const projects = [
+  {name:'Aurevia Interiors',image:'assets/images/aurevia.webp',alt:'Aurevia Interiors portfolio preview',description:'Luxury interior-design portfolio with an admin panel and REST API, including JWT authentication, Cloudinary uploads, Nodemailer enquiries, before-and-after sliders, GSAP and Framer Motion.',tech:['React','TypeScript','Node.js','Express','MongoDB'],github:'',live:''},
+  {name:'Glowelle Beauty Store',image:'assets/images/glowelle.webp',alt:'Glowelle Beauty Store preview',description:'Premium e-commerce site for a Sri Lankan beauty startup with search, wishlist, account, cart, product collections and a fully responsive experience.',tech:['React'],github:'',live:''},
+  {name:'Gym Management Website',image:'assets/images/gym.png',alt:'Gym management website preview',description:'Public website and admin dashboard with full CRUD, bookings, search, statistics and light and dark themes.',tech:['PHP','MySQL','JavaScript'],github:'',live:''},
+  {name:'Scuba Diving & Training Website',image:'assets/images/diving-website.png',alt:'Scuba diving and training website',description:'Dynamic courses, blog and dive sites powered by a database, with an FAQ accordion and responsive layouts.',tech:['PHP','MySQL','PDO','JavaScript'],github:'https://github.com/sau123nethmini/Diving_website.git',live:''},
+  {name:'Dynamic Cake Bakery Website',image:'assets/images/screencapture-cake-bakery.png',alt:'Dynamic cake bakery website',description:'Database-driven catalogue with category filtering, product detail pages and a contact form saved to MySQL.',tech:['PHP','MySQL'],github:'https://github.com/sau123nethmini/Cake_Bakery.git',live:''},
+  {name:'Cocos Store',image:'assets/images/screencapture-cocos-store.png',alt:'Cocos Store storefront',description:'Multi-page storefront served by Spring Boot on embedded Tomcat.',tech:['HTML','CSS','Java','Spring Boot'],github:'https://github.com/sau123nethmini/COCOS_store.git',live:''},
+  {name:'PawsyBee Pet Shop',image:'assets/images/screencapture-pawsybee-pet-shop.png',alt:'PawsyBee pet shop and adoption website',description:'Pet shop and adoption site with showcase cards, detail modals, load more and testimonials.',tech:['HTML','CSS','JavaScript'],github:'https://github.com/sau123nethmini/PawsyBee_Pet_Shop.git',live:''},
+  {name:'Gewal.lk',image:'assets/images/screenshot-2025-06-16-121833.png',alt:'Gewal.lk property management system',description:'MERN real-estate property management system for property listings and workflows.',tech:['MongoDB','Express','React','Node.js'],github:'https://github.com/sau123nethmini/Gewal.lk.git',live:''},
+  {name:'Finance Tracker',image:'assets/images/blue-smartphone-promo-poster.png',alt:'Finance Tracker Android app',description:'Android application for tracking personal expenses and finances.',tech:['Android','Java'],github:'https://github.com/sau123nethmini/Finance_Tracker.git',live:''},
+  {name:'Link Shortener',image:'assets/images/screencapture-file-link-shorten-website.png',alt:'Link shortener website',description:'JavaScript web app for turning long URLs into shareable short links.',tech:['JavaScript','HTML','CSS'],github:'https://github.com/sau123nethmini/Link_shorten_website.git',live:''}
 ];
 
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
+const archive = document.querySelector('#archiveList');
+const preview = document.querySelector('#archivePreview');
+const details = document.querySelector('#projectDetails');
+const imageUrl = (src) => new URL(src, document.baseURI).href;
+let selectedProject = 0;
 
-function typeEffect() {
-  const currentWord = typingWords[wordIndex];
-
-  if (!deleting) {
-    typingText.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentWord.length) {
-      deleting = true;
-      setTimeout(typeEffect, 1400);
-      return;
-    }
-  } else {
-    typingText.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      deleting = false;
-      wordIndex = (wordIndex + 1) % typingWords.length;
-    }
-  }
-
-  setTimeout(typeEffect, deleting ? 50 : 90);
-}
-typeEffect();
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-
-navLinkItems.forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-  });
-});
-
-function setActiveLink() {
-  let currentSection = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    const sectionHeight = section.offsetHeight;
-
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      currentSection = section.getAttribute("id");
-    }
-  });
-
-  navLinkItems.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
-  });
+function renderDetail(index){
+  selectedProject=(index+projects.length)%projects.length;
+  const project=projects[selectedProject];
+  details.innerHTML=`<article class="project-detail" id="project-detail"><div class="detail-top"><span class="detail-index">${String(selectedProject+1).padStart(2,'0')} / ${String(projects.length).padStart(2,'0')}</span><h3 class="detail-name">${project.name}</h3></div><div class="detail-showcase"><figure class="detail-image"><img src="${project.image}" alt="${project.alt}" width="1440" height="760" loading="lazy"></figure><div class="detail-copy"><p>${project.description}</p><div class="tag-list">${project.tech.map(tag=>`<span>${tag}</span>`).join('')}</div><div class="detail-links">${project.live?`<a href="${project.live}" target="_blank" rel="noopener">Live site ↗</a>`:''}${project.github?`<a href="${project.github}" target="_blank" rel="noopener">GitHub ↗</a>`:''}</div></div></div><div class="detail-navigation"><button type="button" data-step="-1" aria-label="Previous project">← Previous</button><span class="mono">${String(selectedProject+1).padStart(2,'0')} / ${String(projects.length).padStart(2,'0')}</span><button type="button" data-step="1" aria-label="Next project">Next →</button></div></article>`;
 }
 
-window.addEventListener("scroll", setActiveLink);
-
-function revealOnScroll() {
-  reveals.forEach(item => {
-    const windowHeight = window.innerHeight;
-    const elementTop = item.getBoundingClientRect().top;
-    const visiblePoint = 100;
-
-    if (elementTop < windowHeight - visiblePoint) {
-      item.classList.add("show");
-    }
-  });
-}
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 350) {
-    scrollTopBtn.classList.add("show");
-  } else {
-    scrollTopBtn.classList.remove("show");
-  }
-});
-
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-const savedTheme = localStorage.getItem("portfolio-theme");
-if (savedTheme === "light") {
-  document.body.classList.add("light-mode");
-  themeToggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-} else {
-  themeToggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+function renderArchive(){
+  if(!archive || !details) return;
+  archive.innerHTML = projects.map((project,index)=>`<button class="archive-item" type="button" data-index="${index}" aria-controls="project-detail" aria-current="${index===0}"><span class="archive-num">${String(index+1).padStart(2,'0')}</span><span class="archive-name">${project.name}</span><span class="archive-tech">${project.tech.join(' · ')}</span></button>`).join('');
+  const buttons=[...archive.querySelectorAll('.archive-item')];
+  const setActive=(index)=>{buttons.forEach((button,i)=>button.setAttribute('aria-current',String(index===i)));if(preview){preview.innerHTML=`<img src="${projects[index].image}" alt="${projects[index].alt}" width="900" height="700">`;}};
+  buttons.forEach((button,index)=>{button.style.setProperty('--thumb',`url("${imageUrl(projects[index].image)}")`);button.addEventListener('mouseenter',()=>setActive(index));button.addEventListener('focus',()=>setActive(index));button.addEventListener('click',()=>{setActive(index);renderDetail(index);document.querySelector('#selected-work').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});});});
+  details.addEventListener('click',event=>{const control=event.target.closest('[data-step]');if(control){renderDetail(selectedProject+Number(control.dataset.step));setActive(selectedProject);}});
+  renderDetail(0);
+  setActive(0);
 }
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
-
-  if (document.body.classList.contains("light-mode")) {
-    localStorage.setItem("portfolio-theme", "light");
-    themeToggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-  } else {
-    localStorage.setItem("portfolio-theme", "dark");
-    themeToggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-  }
-});
-
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email || !message) {
-    alert("Please fill in all fields.");
-    return;
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  window.location.href = `mailto:saumya123na@gmail.com?subject=${subject}&body=${body}`;
-
-  contactForm.reset();
-});
+function initMenu(){const toggle=document.querySelector('#menuToggle'),nav=document.querySelector('#siteNav');if(!toggle||!nav)return;toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');}));}
+function initHeader(){const header=document.querySelector('#siteHeader'),progress=document.querySelector('.progress');let previous=0;const update=()=>{const y=window.scrollY,max=document.documentElement.scrollHeight-innerHeight;header?.classList.toggle('scrolled',y>80);if(progress)progress.style.transform=`scaleX(${max>0?y/max:0})`;if(y>400&&y>previous+3)header.style.transform='translateY(-100%)';else if(y<previous-3||y<100)header.style.transform='translateY(0)';previous=y;};window.addEventListener('scroll',update,{passive:true});update();}
+function initActiveNav(){const links=[...document.querySelectorAll('.nav-links a')],sections=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)links.forEach(link=>link.classList.toggle('active',link.hash===`#${entry.target.id}`));}),{rootMargin:'-30% 0px -60% 0px'});sections.forEach(section=>observer.observe(section));}
+function initReveals(){const targets=document.querySelectorAll('.about-copy,.role,.education,.skills-table>div,.cert,.project-detail,.section-head,.archive-title');targets.forEach(target=>target.classList.add('reveal-ready'));const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.12});targets.forEach(target=>observer.observe(target));}
+function initCounters(){const counters=document.querySelectorAll('[data-count]');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;const node=entry.target,target=Number(node.dataset.count),prefix=node.dataset.prefix||'',suffix=node.dataset.suffix||'',start=performance.now(),duration=850;function frame(now){const progress=Math.min((now-start)/duration,1),value=Math.round(target*(1-Math.pow(1-progress,3)));node.textContent=`${prefix}${value}${suffix}`;if(progress<1)requestAnimationFrame(frame);}requestAnimationFrame(frame);observer.unobserve(node);}),{threshold:.7});counters.forEach(counter=>observer.observe(counter));}
+function initPreloader(){const screen=document.querySelector('#preloader');if(!screen)return;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let alreadySeen=false;try{alreadySeen=sessionStorage.getItem('saumya-portfolio-seen')==='1';sessionStorage.setItem('saumya-portfolio-seen','1');}catch{}if(alreadySeen||reduced){screen.remove();return;}const count=screen.querySelector('.preloader-count');const start=performance.now(),duration=780;function tick(now){const progress=Math.min((now-start)/duration,1),value=Math.floor(progress*100).toString().padStart(3,'0');if(count)count.textContent=`000 → ${value}`;if(progress<1){requestAnimationFrame(tick);return;}screen.classList.add('is-done');window.setTimeout(()=>screen.remove(),720);}requestAnimationFrame(tick);}
+function initHero(){if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('hero-seen');return;}requestAnimationFrame(()=>document.documentElement.classList.add('hero-seen'));}
+function initMotion(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);gsap.utils.toArray('.role-dot').forEach(dot=>gsap.fromTo(dot,{backgroundColor:'#f3eee4'},{backgroundColor:'#7a1418',scrollTrigger:{trigger:dot,start:'top 55%',once:true},duration:.5,ease:'power3.out'}));}if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__portfolioLenis=lenis;const raf=(time)=>{lenis.raf(time);requestAnimationFrame(raf);};requestAnimationFrame(raf);}}
+renderArchive();initMenu();initHeader();initActiveNav();initReveals();initCounters();initPreloader();initHero();initMotion();
